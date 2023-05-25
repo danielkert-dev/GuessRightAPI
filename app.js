@@ -27,7 +27,7 @@ app.get("*", function (req, res) {
   res.redirect("/");
 });
 
-const server =app.listen(process.env.APP_PORT, () => {
+const server =app.listen(process.env.PORT, () => {
 var os = require('os');
 var networkInterfaces = os.networkInterfaces();
 console.log(networkInterfaces);
