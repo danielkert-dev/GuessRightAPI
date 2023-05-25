@@ -3,7 +3,6 @@ const { createPool } = require("mysql");
 module.exports = createPool({
     multipleStatements: true,
     charset: 'UTF8_GENERAL_CI',
-    socketPath: '/run/mysqld/mysqld.sock',
     user: 'client', // this needs to match the node.js process user
     port: process.env.DB_PORT,
     host: process.env.DB_HOST,
