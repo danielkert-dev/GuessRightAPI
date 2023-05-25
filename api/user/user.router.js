@@ -10,7 +10,7 @@ const {
 const { checkToken } = require("../../auth/bearer.token.auth"); // Works
 const router = require("express").Router();
 
-router.get("/SearchByUsername/:input", userSearchByUsername); // Works
+router.get("/SearchByUsername/:input", checkToken, userSearchByUsername); // Works
 router.get("/SearchById/:id", checkToken, userSearchById); // Works
 router.post("/Create", userCreate); // Request body, Works
 router.post("/Auth", userAuth); // Request body, Works
