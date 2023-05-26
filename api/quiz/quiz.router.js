@@ -18,7 +18,7 @@ const {
 const { checkToken } = require("../../auth/bearer.token.auth"); // Works
 const router = require("express").Router();
 
-router.get("/SearchAll/:page/:pageSize", quizSearchAll); // Works
+router.get("/SearchAll/:page/:pageSize", checkToken, quizSearchAll); // Works
 router.get("/SearchById/:id", checkToken, quizSearchById); // Works
 router.get("/SearchByAmount/:page/:pageSize", checkToken, quizSearchByAmount); // Works
 router.get("/SearchByTitle/:title", checkToken, quizSearchByTitle);
