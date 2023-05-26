@@ -165,7 +165,7 @@ module.exports = {
   // quizCreate
   quizCreate: (input, callBack) => {
     pool.query(
-      "INSERT INTO `quiz`(`title`,`description`, `user_ID`, `image`) VALUES (?,?,?,?)",
+      "INSERT INTO `quiz`(`title`,`description`, `user_ID`, `image`, `amount_done`) VALUES (?,?,?,?, 0)",
       [input.title, input.description, input.user_ID, input.image],
       (error, results) => {
         if (error) {
