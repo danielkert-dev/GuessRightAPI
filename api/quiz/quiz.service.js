@@ -198,7 +198,7 @@ module.exports = {
   quizUpdate: (input, callBack) => {
     pool.query(
       "UPDATE `quiz` SET `title`= ?,`description`= ?,`image`= ? WHERE id = ?",
-      [input.title, input.desctiption, input.image, input.id],
+      [input.title, input.description, input.image, input.id],
       (error, results) => {
         if (error) {
           console.error(error);
@@ -231,7 +231,7 @@ module.exports = {
   questionUpdate: (input, callBack) => {
     pool.query(
       "UPDATE `questions` SET `quiz_ID`= ? ,`question`= ? ,`description`= ? ,`choice`= ?,`correct_answer`= ? WHERE ?",
-      [input.quiz_ID, input.question, input.desctiption, input.choice, input.correct_answer, input.id],
+      [input.quiz_ID, input.question, input.description, input.choice, input.correct_answer, input.id],
       (error, results) => {
         if (error) {
           console.error(error);
