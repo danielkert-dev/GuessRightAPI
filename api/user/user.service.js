@@ -29,7 +29,7 @@ module.exports = {
 
   userCreate: (input, callBack) => {
     pool.query(
-      "INSERT INTO `user`(`username`, `email`, `password`, `disable`) VALUES (?,?,?,0)",
+      "INSERT INTO `user`(`username`, `email`, `password`, `disabled`) VALUES (?,?,?,0)",
       [input.username, input.email, input.password],
       (error, results) => {
         if (error) {
